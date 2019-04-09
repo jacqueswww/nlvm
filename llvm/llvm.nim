@@ -30,13 +30,14 @@ else:
 
 {.passL: "-Wl,--as-needed".}
 {.passL: gorge(LLVMOut & "bin/llvm-config --ldflags").}
-{.passL: gorge(LLVMOut & "bin/llvm-config --system-libs").}
 
 {.passL: "-llldDriver" .}
 {.passL: "-llldELF" .}
 {.passL: "-llldWasm" .}
 {.passL: "-llldCore" .}
 {.passL: "-llldCommon" .}
+
+{.passL: gorge(LLVMOut & "bin/llvm-config --system-libs").}
 
 {.compile: "wrapper.cc".}
 

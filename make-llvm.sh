@@ -47,6 +47,6 @@ mkdir -p $TGT
 cd $TGT
 
 shift 4
-cmake -GNinja "$@" ..
+cmake -GNinja -DLLVM_USE_LINKER=gold "$@" ..
 
 ninja
