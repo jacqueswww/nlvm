@@ -24,7 +24,7 @@ LLD_ROOT=lld-$VER2.src
   wget http://releases.llvm.org/$VER2/$LLVM_ROOT.tar.xz
 }
 
-[ -d $LLVM_ROOT ] || {
+[ -f $LLVM_ROOT/CMakeLists.txt ] || {
   tar xf $LLVM_ROOT.tar.xz
 }
 
@@ -32,7 +32,7 @@ LLD_ROOT=lld-$VER2.src
   wget http://releases.llvm.org/$VER2/$LLD_ROOT.tar.xz
 }
 
-[ -d $LLD_ROOT ] || {
+[ -f $LLD_ROOT/CMakeLists.txt ] || {
   tar xf $LLD_ROOT.tar.xz
 }
 
